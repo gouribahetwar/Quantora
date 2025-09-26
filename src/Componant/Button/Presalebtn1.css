@@ -1,0 +1,31 @@
+.gradient-borderx {
+  display: inline-block;
+  padding: 1px; /* border thickness */
+  border-radius: 10px;
+  background: linear-gradient(90deg,#000000,  #ffffff,#ffffff,#000000);
+}
+
+.mobile-btnsss {
+  display: inline-block;
+  font-family: 'Nunito';
+  padding: 12px 20px;
+  border-radius: 10px; /* inner radius */
+  border: none;
+  background: #001f6d;
+  color: white;
+  font-weight: 40;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.mobile-btnsss:hover {
+  background: white;
+  color: #001f6d;
+}
+
+.mobile-btnsss:focus {
+  outline: 1px solid rgba(124, 219, 217, 0.2);
+  outline-offset: 1px;
+}

@@ -1,0 +1,140 @@
+.footer {
+ position: relative;
+  background: url("../../assets/footerImg.jpg") no-repeat center center/cover;
+  color: #ccc;
+  padding: 50px 30px;
+  font-family: Nunito, sans-serif;
+  border-top: 1px solid rgb(28, 185, 233);
+  z-index: 1;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* opacity control यहाँ */
+  z-index: -1; /* overlay को पीछे रखने के लिए */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+  flex-wrap: wrap; 
+}
+
+.footer-about {
+  max-width: 500px;
+}
+
+.footer-logo-img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-about p {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.footer-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #00e6e6;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00e6e6;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials img {
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+
+.footer-socials img:hover {
+  filter: brightness(1.5);
+}
+
+
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 40px;
+  font-size: 18px;
+  color: white;
+  /* Gradient border */
+  border-top: 1px solid #00e6e6;
+  
+  border-image-slice: 1;
+}
+
+
+@media (max-width: 1200px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-about {
+    grid-column: span 3; 
+    max-width: 100%;
+  }
+
+  .footer-column:nth-last-child(1) {
+    grid-column: span 3;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-about,
+  .footer-column {
+    width: 100%; /* each one full width */
+  }
+
+  .footer-socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+

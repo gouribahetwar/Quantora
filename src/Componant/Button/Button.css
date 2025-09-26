@@ -1,0 +1,38 @@
+/* Base button */
+.custom-btn {
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  border: 2px solid transparent; /* required for gradient border */
+  font-size: 16px;
+}
+
+/* Gradient border button */
+.custom-btn.primary {
+  background:
+    #0B115E padding-box, 
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(11, 17, 94, 1) 50%,
+      rgba(255, 255, 255, 1) 82%
+    ) border-box;
+  color: #7CDBD9; 
+}
+
+.custom-btn.primary:hover {
+  opacity: 0.9;
+}
+/* Outline version still available */
+.custom-btn.outline {
+  background:
+    #fff padding-box,
+    linear-gradient(90deg,
+     
+      rgba(11, 17, 94, 1) 50%,
+      rgba(255, 255, 255, 1) 82%
+    ) border-box;
+  color: #0B115E;
+}

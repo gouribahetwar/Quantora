@@ -1,0 +1,138 @@
+/* Tokenomics.css */
+
+.tokenomics-section {
+  background: #000;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+ font-weight: 500;
+font-style: Medium;
+font-size: 66px;
+line-height: 73px;
+letter-spacing: 0%;
+  color: #7CDBD9;
+  margin-bottom: 30px;
+  text-align: center;
+ font-family: 'nunito';
+ text-shadow: 0px 4px 4px #7CDBD966;
+}
+
+/* Flex Layout */
+.content {
+  display: flex;
+  justify-content: center; /* center both */
+  align-items: center;
+  padding: 10px 20px;
+  gap: 50px; /* reduced gap */
+  flex-wrap: wrap;
+}
+
+/* Left Image */
+.token-image {
+  max-width: 700px;
+  
+  border-radius: 12px;
+  width: 100%;
+}
+
+/* Right Card */
+.token-card {
+  max-width: 380px;
+ 
+  border: 1px solid #0ff;
+  border-radius: 12px;
+  padding: 20px 30px;
+  flex: 1;
+  min-width: 280px;
+  align-items: center;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #002244;
+  border: 1px solid #0ff;
+  border-radius: 5px;
+  padding: 12px 25px;
+  margin: 15px 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative; /* required for pseudo-element */
+  overflow: hidden;
+}
+
+/* Add glow on bottom only */
+.row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #00e6e6;
+  box-shadow: 0 0 8px #00e6e6, 0 0 15px #0ff;
+  transition: width 0.4s ease-in-out;
+}
+
+/* On hover, animate the bottom line */
+.row:hover::after {
+  width: 100%;
+}
+
+/* Left Label */
+.label {
+  font-weight: bold;
+  color: #ccc;
+  text-align: left;
+  flex: 1;
+}
+
+/* Right Value */
+.value {
+  color: #00e6e6;
+  font-weight: bold;
+  text-align: right;
+  flex: 1;
+}
+
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 35px;
+  }
+.tokenomics-section {
+ 
+  padding: 10px 20px;
+ 
+}
+  .token-card {
+  max-width: 250px;
+ 
+ 
+  padding: 10px 20px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #002244;
+  border: 1px solid #0ff;
+  border-radius: 5px;
+  padding: 9px 18px;
+  margin: 12px 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative; 
+  overflow: hidden;
+}
+}

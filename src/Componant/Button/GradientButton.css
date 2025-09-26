@@ -1,0 +1,30 @@
+.gradient-border {
+  display: inline-block;
+  padding: 1px; /* border thickness */
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0B115E, #ffffff);
+}
+
+.mobile-btnss {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px; /* inner radius */
+  border: none;
+  background: #001f6d;
+  color: #7CDBD9;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.mobile-btnss:hover {
+  background: white;
+  color: #001f6d;
+}
+
+.mobile-btnss:focus {
+  outline: 1px solid rgba(124, 219, 217, 0.2);
+  outline-offset: 1px;
+}

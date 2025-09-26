@@ -1,0 +1,231 @@
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background: #000;
+  color: #fff;
+  padding: 50px 0; 
+  overflow: hidden;
+}
+
+/* Polygon background overlay */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7CDBD91C;
+  /* clip-path: polygon(59% 34%, 94% 6%, 100% 11%, 100% 100%, 1% 100%, 2% 99%, 52% 95%); */
+clip-path: polygon(58% 30%, 100% 5%, 100% 60%, 100% 100%, 7% 100%, 7% 100%, 54% 95%);
+
+
+
+  z-index: 1;
+}
+
+/* Keep content above overlay */
+.about-container,
+.about-section h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;              
+  padding-left: 20px;     
+  padding-right: 20px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-section h2 {
+font-weight: 500;
+font-style: Medium;
+font-size: 66px;
+line-height: 73px;
+letter-spacing: 0%;
+  color: #7CDBD9;
+  margin-bottom: 20px;
+  text-align: center;
+ font-family: 'nunito';
+ text-shadow: 0px 4px 4px #7CDBD966;
+ 
+}
+
+.about-text p {
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ccc;
+  font-weight: 400;
+  padding-left: 35px;
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s;
+  font-weight: 200;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 22px;
+}
+
+.feature-box:hover {
+  background: rgba(124, 219, 217, 0.1);
+  border: 1px solid #7CDBD9;
+  color: #7CDBD9;
+}
+
+/* Star in the middle of grid */
+.star-box {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+.star-icon {
+  font-size: 30px;
+  color: #7CDBD9;
+  filter: drop-shadow(0 0 10px rgba(124, 219, 217, 0.8))
+          drop-shadow(0 0 20px rgba(124, 219, 217, 0.6))
+          drop-shadow(0 0 30px rgba(124, 219, 217, 0.4));
+}
+
+/* Right side image */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 380px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 25px rgba(124, 219, 217, 0.6));
+   animation: rotateYaxis 3s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .about-section h2 {
+    font-size: 54px;
+  }
+  .about-text p {
+    font-size: 20px;
+  }
+  .feature-box {
+    font-size: 20px;
+    padding: 25px 10px;
+  }
+}
+
+/* Tablets (≤992px) */
+@media screen and (max-width: 992px) {
+  .about-container {
+    /* flex-direction: column; */
+    text-align: center;
+    gap: 50px;
+  }
+  .about-section h2 {
+    font-size: 44px;
+  }
+  .about-text p {
+    font-size: 18px;
+    text-align: left;
+  }
+  .features-grid {
+    /* grid-template-columns: 1fr;  */
+    gap: 25px;
+  }
+  .feature-box {
+    font-size: 18px;
+    padding: 20px;
+  }
+  .about-image img {
+    width: 300px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media screen and (max-width: 768px) {
+  /* .about-section {
+    padding: 40px 15px;
+  } */
+  .about-section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+  }
+  .about-text p {
+    font-size: 16px;
+    text-align: left;
+    
+  }
+  .feature-box {
+    font-size: 16px;
+    padding: 18px;
+  }
+  .about-image img {
+    width: 260px;
+  }
+}
+
+/* Small phones (≤480px) */
+@media screen and (max-width: 480px) {
+  .about-section {
+    padding: 30px 0;
+  }
+  .about-section h2 {
+    font-size: 26px;
+  }
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 15px;
+  }
+  .feature-box {
+    font-size: 14px;
+    padding: 15px;
+  }
+  .about-image img {
+    width: 220px;
+  }
+  .features-grid {
+  
+  padding-left: 10px;
+}
+}
+
+@keyframes rotateYaxis {
+      from {
+        transform: rotateY(-20deg);
+      }
+      to {
+        transform: rotateY(20deg);
+      }
+}
