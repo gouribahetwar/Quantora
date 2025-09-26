@@ -2,7 +2,7 @@ import React from "react";
 import "./Presale.css";
 import bgVideo from "../../assets/HeroBG.mp4";
 import tokenLogo from "../../assets/preassaleMain.png";
-import heroShape1 from "../../assets/Presale2.png";
+import heroShape1 from "../../assets/presale2.png";
 import { FaArrowRight } from "react-icons/fa";
 import White from "../Button/White";
 import Presalebtn1 from "../Button/Presalebtn1";
