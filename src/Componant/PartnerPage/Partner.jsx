@@ -1,6 +1,6 @@
 import React from "react";
 import "./Partner.css";
-import Pancake from "../../assets/bsc.png";
+import Pancake from "../../assets/Bsc.png";
 import Trust from "../../assets/trust.png";
 import BscScan from "../../assets/cake.png";
 import CoinMarket from "../../assets/market.png";
